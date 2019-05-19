@@ -629,7 +629,7 @@
     <Compile Include="Assets\Draw.cs" />
     <Compile Include="Assets\Graph\Graph.cs" />
     <Compile Include="Assets\Graph\graphdata\Graph1.cs" />
-    <Compile Include="Assets\Graph\graphdata\GraphLink.cs" />
+    <Compile Include="Assets\Graph\graphdata\Graph2.cs" />
     <Compile Include="Assets\Graph\node\node.cs" />
     <Compile Include="Assets\Graph\SetNodesParameter.cs" />
   </ItemGroup>
