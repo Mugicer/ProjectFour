@@ -15,7 +15,11 @@ public class SetNodesParameter : MonoBehaviour
     {
         
     }
-    
+    private void Update()
+    {
+        
+    }
+
     public void setV3() {
         graph.nodelength =V3.Length;//導入長度
         graph.setnodes();//創造點

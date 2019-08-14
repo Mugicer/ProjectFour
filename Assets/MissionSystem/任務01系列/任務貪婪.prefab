@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4877217164842161105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2442401031483569833}
+  - component: {fileID: 103376727174499122}
+  - component: {fileID: 6301756963667501654}
+  m_Layer: 5
+  m_Name: "\u4EFB\u52D9\u8CAA\u5A6A"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2442401031483569833
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877217164842161105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &103376727174499122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877217164842161105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff111d3a03676e43a858cd3f0f263f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Missionnumber: 1
+  title: "\u4EFB\u52D9:\u8CAA\u5A6A"
+  Npc: noname
+  descript: "\u6211\u7684 \u6211\u7684 \n\u5168\u90FD\u662F\u6211\u7684!\n\n"
+  ask:
+  - "\u8490\u96C6\u5834\u666F\u4E2D\u6240\u6709\u7269\u54C1 0/?"
+  reward:
+  - {fileID: 3411100363265118654, guid: 8a900c62e53d05a49b1cdef7af6bb247, type: 3}
+  - {fileID: 3411100363265118654, guid: 8a900c62e53d05a49b1cdef7af6bb247, type: 3}
+  needs:
+  - {fileID: 4961923434504502772, guid: bafc2386e8a0c204cac8debc93628624, type: 3}
+  missionstate: 0
+--- !u!114 &6301756963667501654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877217164842161105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a42072385ebbad4992e6f75288d3214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m01: {fileID: 0}
+  playerBag: {fileID: 0}

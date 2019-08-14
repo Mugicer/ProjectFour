@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Graph1 : MonoBehaviour
 {
@@ -57,5 +58,12 @@ public class Graph1 : MonoBehaviour
     }
     public void opentrature() {
         trature.active=true;
+        GM gm;
+        gm = FindObjectOfType<GM>();
+        gm.graphic1=true;
+        backtoworld(gm.LastSence);
+    }
+    private void backtoworld(string str ) {
+        SceneManager.LoadScene(str);
     }
 }

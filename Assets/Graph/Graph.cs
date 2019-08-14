@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Graph : MonoBehaviour//此為圖形表格 不主動執行任何事物
 {
     public GameObject newnode;
+    public Text prompt;//這個需要手動放置Text
     public int nodelength = 2;
     public RectTransform[] nodes;
     public GameObject startpoint;
     public RectTransform endpoint;
+    
 
     public int[][] thelink;
     public Vector3[] V3;
@@ -17,6 +20,9 @@ public class Graph : MonoBehaviour//此為圖形表格 不主動執行任何事�
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+    }
+    private void Start()
+    {
     }
     private void Update()
     {
@@ -76,7 +82,8 @@ public class Graph : MonoBehaviour//此為圖形表格 不主動執行任何事�
         {
             GameObject a = walkover.Pop();
             a.SendMessage("setbtnunpass", SendMessageOptions.DontRequireReceiver);
-            print("返回");
+            prompt.text = "你返回上一步";
+            clearprompt();
             WrightLine0();
         }
 
@@ -91,31 +98,44 @@ public class Graph : MonoBehaviour//此為圖形表格 不主動執行任何事�
             {
                 walkover.Pop();
                 Thenode.SendMessage("setbtnunpass", SendMessageOptions.DontRequireReceiver);
-                print("返回");
+                prompt.text = "你返回上一步";
+                clearprompt();
                 WrightLine0();
                 return;
             }
+
         }
         else {
             walkover.Push(Thenode);
             Thenode.SendMessage("setbtnstart", SendMessageOptions.DontRequireReceiver);
             startpoint = Thenode;
-            print("第一個");
+            prompt.text = "紅色是你的起點";
+            clearprompt();
             WrightLine0();
+            return;
         }
         if (walkover.Count==nodelength)
         {
             if (startpoint==Thenode)
             {
                 walkover.Push(Thenode);
-                print("最後一個");
+                prompt.text = "你走到終點了";
+                clearprompt();
                 transform.SendMessage("opentrature", SendMessageOptions.DontRequireReceiver);
                 WrightLine0();
+                return;
             }
         }
         if (walkover.Contains(Thenode))
         {
-            print("走過了");
+            if (startpoint == Thenode&& walkover.Count != nodelength)
+            {
+                prompt.text = "你需要走完白點才能回到終點";
+                clearprompt();
+                return;
+            }
+            prompt.text = "這個點已經走過不能再走了";
+            clearprompt();
             WrightLine0();
             return;
         }//是否走過
@@ -133,8 +153,12 @@ public class Graph : MonoBehaviour//此為圖形表格 不主動執行任何事�
                     Thenode.SendMessage("setbtnpass", SendMessageOptions.DontRequireReceiver);
                     print("沒走過");
                     WrightLine0();
+                    return;
                 }
             }
+            prompt.text = "這不是鄰近的點，不能走";
+            clearprompt();
+            return;
         }
     }
 
@@ -170,7 +194,16 @@ public class Graph : MonoBehaviour//此為圖形表格 不主動執行任何事�
         lineRenderer.SetPosition(a, point);                           
     }
 
-
+    private void clearprompt() {
+        if (IsInvoking("_clearprompt"))
+        {
+            CancelInvoke("_clearprompt");
+        }
+        Invoke("_clearprompt", 3);
+    }
+    private void _clearprompt() {
+        prompt.text = "";
+    }
     
 
 }

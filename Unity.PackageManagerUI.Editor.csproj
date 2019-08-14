@@ -253,6 +253,12 @@
     <Reference Include="UnityEditor.Networking">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="Vuforia.UnityExtensions.Editor">
+      <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.UnityExtensions">
+      <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.GoogleAudioSpatializer">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
@@ -708,6 +714,48 @@
     <Compile Include="Packages\com.unity.package-manager-ui\Editor\Sources\UI\PackageStatusBar.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Fungus\Docs\CHANGELOG.txt" />
+    <None Include="Assets\Fungus\Docs\LICENSE.txt" />
+    <None Include="Assets\Fungus\Docs\README.txt" />
+    <None Include="Assets\Fungus\Fonts\Amaranth\SIL Open Font License.txt" />
+    <None Include="Assets\Fungus\Fonts\Exo2\OFL.txt" />
+    <None Include="Assets\Fungus\Integrations\Playmaker\ReadMe.txt" />
+    <None Include="Assets\Fungus\Integrations\Spine\Readme.txt" />
+    <None Include="Assets\Fungus\Scripts\link.xml" />
+    <None Include="Assets\Fungus\Textures\Attribution.txt" />
+    <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Lua\fungus.txt" />
+    <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Lua\inspect.txt" />
+    <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Types\FungusTypes.txt" />
+    <None Include="Assets\Fungus\Thirdparty\FungusLua\Resources\Types\UnityTypes.txt" />
+    <None Include="Assets\Fungus\Thirdparty\FungusLua\Thirdparty\JSON\readme.txt" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Fungus\Thirdparty\TextMeshPro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Fungus\Thirdparty\ThirdPartyNotices.txt" />
+    <None Include="Assets\FungusExamples\Attribution.txt" />
+    <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Button\CC-BY.txt" />
+    <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Door\CC-BY.txt" />
+    <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Key\CC-BY.txt" />
+    <None Include="Assets\FungusExamples\FirstPerson\Visuals\Google Poly\Lock\CC-BY.txt" />
+    <None Include="Assets\FungusExamples\FungusLua\Localization\stringtable.txt" />
+    <None Include="Assets\FungusExamples\FungusLua\Narrative\Resources\Lua\junglestory.txt" />
+    <None Include="Assets\FungusExamples\FungusTown\Readme.txt" />
+    <None Include="Assets\FungusExamples\Sherlock\Readme.txt" />
+    <None Include="Assets\FungusExamples\TheFacility\Fonts\aleo\SIL Open Font License.txt" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryCommon.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryDark.uss" />
     <None Include="Packages\com.unity.collab-proxy\Editor\Resources\Styles\CollabHistoryLight.uss" />
