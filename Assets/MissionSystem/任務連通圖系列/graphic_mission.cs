@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class graphic_mission : MonoBehaviour
 {
+    public string btn_text;
     public string graghicscene;
     public GM gm;
     private void Awake()

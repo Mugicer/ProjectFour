@@ -13,10 +13,12 @@ public class PlayerHPMPbar : MonoBehaviour
     public int nowHP;
     public int MaxMP;
     public int nowMP;
+    public bool unattack;
     private void Start()
     {
         HP.maxValue = MaxHP;
         MP.maxValue = MaxMP;
+        unattack = false;
     }
     public void setMaxHP(int a){
         MaxHP = a;
@@ -30,7 +32,21 @@ public class PlayerHPMPbar : MonoBehaviour
     }
     public void plusHP(int a)
     {
-        nowHP += a;
+        //Debug.Log("HP " + a);
+
+        if (a<0 && !unattack)
+        {
+            nowHP += a;
+            transform.SendMessage("Stunning", 0.3f, SendMessageOptions.DontRequireReceiver);
+            StartCoroutine("Unattack", 0.8f);
+        }
+        if (a>0)
+        {
+            nowHP += a;
+        }
+
+
+
         if (nowHP > MaxHP)
         {
             nowHP = MaxHP;
@@ -59,5 +75,11 @@ public class PlayerHPMPbar : MonoBehaviour
         HPtext.text = nowHP.ToString() + " / " + MaxHP.ToString();
         MP.value = nowMP ;
         MPtext.text = nowMP.ToString() + " / " + MaxMP.ToString();
+    }
+    IEnumerator Unattack(float time) {
+        unattack = true;
+        yield return new WaitForSeconds(time);
+        unattack = false;
+
     }
 }

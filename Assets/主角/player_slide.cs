@@ -27,7 +27,7 @@ public class player_slide : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         rb.position = Vector2.Lerp(rb.position,po,slidespeed);
-        Debug.Log(animator.transform.position);
+        //Debug.Log(animator.transform.position);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

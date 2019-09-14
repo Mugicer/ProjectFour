@@ -52,10 +52,22 @@ public class ChoosePage : MonoBehaviour
         {
             GameObject b = Instantiate(btn, content.transform);
             btns.Add(b);
-            b.GetComponentInChildren<Text>().text = item.graghicscene;
+            b.GetComponentInChildren<Text>().text = item.btn_text;
             b.GetComponent<Button>().onClick.AddListener(delegate
             {
                 item.OpenGraphic();
+                CloseChoosePage();
+            }
+            );
+        }
+        foreach (pass_mission item in NPC.transform.GetComponentsInChildren<pass_mission>())
+        {
+            GameObject b = Instantiate(btn, content.transform);
+            btns.Add(b);
+            b.GetComponentInChildren<Text>().text = item.btn_text;
+            b.GetComponent<Button>().onClick.AddListener(delegate
+            {
+                item.trypass();
                 CloseChoosePage();
             }
             );

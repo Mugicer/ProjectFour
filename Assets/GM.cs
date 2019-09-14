@@ -20,10 +20,10 @@ public class GM : MonoBehaviour
     private GameObject[][] npcmisson;
     void Awake()
     {
-        Debug.Log("03");
+        //Debug.Log("03");
         if (instance == null)
         {
-            Debug.Log("04");
+            //Debug.Log("04");
             instance = this;
             DontDestroyOnLoad(this);
             name = "最大的權限狗";
@@ -34,7 +34,7 @@ public class GM : MonoBehaviour
             Debug.Log("刪除場景" + sceneName + "的" + name);
             Destroy(gameObject);
         }
-        Debug.Log("06");
+        //Debug.Log("06");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player2DOutput>();
         canvas = GameObject.Find("Canvas");
     }
@@ -61,7 +61,7 @@ public class GM : MonoBehaviour
             teleport tp in 
             canvas.GetComponentsInChildren<teleport>())
         {
-            Debug.Log(tp);
+            //Debug.Log(tp);
             if (tp.sceneName ==LastSence)
             {
                 player.transform.position = tp.transform.position;

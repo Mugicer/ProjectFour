@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Moneybullet : MonoBehaviour
 {
+    public int dmg;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class Moneybullet : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             Debug.Log("子彈碰到玩家");
+            collision.transform.SendMessage("plusHP", dmg);
             Destroy(gameObject);
         }
         

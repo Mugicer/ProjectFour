@@ -5,6 +5,7 @@ using UnityEngine;
 public class player_jump : StateMachineBehaviour
 {
     Rigidbody2D rb;
+    public AudioClip jumpsound;
     public int jumpcount;
     public float Jumphigh;
     public float high;
@@ -12,7 +13,7 @@ public class player_jump : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         rb = animator.transform.GetComponent<Rigidbody2D>();
-        Debug.Log("in");
+        //Debug.Log("in");
         rb.velocity = new Vector2(0, 0);
         //rb.AddForce(Vector2.up*animator.GetFloat("jumppower") );
         high = rb.position.y + Jumphigh;
@@ -25,7 +26,7 @@ public class player_jump : StateMachineBehaviour
         
         float ho = animator.GetFloat("horizontal");
         float sp = animator.GetFloat("speed");
-        Debug.Log("123");
+        //Debug.Log("123");
         rb.MovePosition(rb.position + Vector2.right * ho * sp * Time.timeScale+Vector2.up* animator.GetFloat("jumppower") * Time.timeScale);
 
         if (rb.position.y>=high)

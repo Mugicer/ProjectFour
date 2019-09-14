@@ -68,20 +68,23 @@ public class Player2DInput : MonoBehaviour
         {
             num = 0;
         }
-        if (Input.GetAxisRaw("Horizontal") > 0)
+        if (!po.stunning)
         {
-            if (!lastfaceright)
-            {
-                lastfaceright = true;
-                image.transform.Rotate(0,180,0);
+            if (Input.GetAxisRaw("Horizontal") > 0)
+            {   
+                if (!lastfaceright)
+                {
+                    lastfaceright = true;
+                    image.transform.Rotate(0, 180, 0);
+                }
             }
-        }
-        if (Input.GetAxisRaw("Horizontal") < 0)
-        {
-            if (lastfaceright)
+            if (Input.GetAxisRaw("Horizontal") < 0)
             {
-                lastfaceright = false;
-                image.transform.Rotate(0, -180, 0);
+                if (lastfaceright)
+                {
+                    lastfaceright = false;
+                    image.transform.Rotate(0, -180, 0);
+                }
             }
         }
         image.sprite = pics[num];

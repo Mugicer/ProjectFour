@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7371344492612853348}
   - component: {fileID: 7371344492612853344}
   m_Layer: 5
-  m_Name: boom
+  m_Name: boom_Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -177,7 +177,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &7371344492612853348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eac5c1345093d447a01a17a12aa60c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: -1
   count: 0
   Maxtime: 5
   Mintime: 3

@@ -36,11 +36,12 @@ public class Player2DOutput : MonoBehaviour
     public float Jumppower;
     //[Header("Playerstate")]
     public bool onground;
+    public bool stunning;
     
     // Start is called before the first frame update
     private void Awake()
     {
-        Debug.Log("00");
+        //Debug.Log("00");
         gm = GameObject.FindGameObjectWithTag("GameMagnager").GetComponent<GM>();
         canvas = GameObject.Find("canvas");
         playerinput = GetComponent<Player2DInput>();
@@ -59,7 +60,11 @@ public class Player2DOutput : MonoBehaviour
     void Update()
     {
         animparemater();
+        
         lookaround();
+        
+
+
         if (Input.GetKeyDown(playerinput.quest))
         {
             ChooseReader.GetComponent<ChoosePage>().ChangeNpcName(playerinput.transform.Find("missiondiary").GetComponentInChildren<NPC>());
@@ -177,6 +182,25 @@ public class Player2DOutput : MonoBehaviour
         anim.SetFloat("jumppower", Jumppower);
         anim.SetBool("Movable", moveable);
         anim.SetFloat("speed", Movespeed);
+        anim.SetBool("stunning",stunning);
+        if (Input.GetMouseButtonDown(1))
+        {
+            anim.SetTrigger("attack");
+        }
+        
 
     }//輸入按鍵時
+    public void Stunning(float time) {
+
+        StopCoroutine("Stun");
+        StartCoroutine("Stun",time);
+        
+    }
+    IEnumerator Stun(float time) {
+        stunning = true;
+        moveable = false;
+        yield return new WaitForSeconds(time);
+        stunning = false;
+        moveable = true;
+    }
 }

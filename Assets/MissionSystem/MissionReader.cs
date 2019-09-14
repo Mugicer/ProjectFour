@@ -108,6 +108,8 @@ public class MissionReader : MonoBehaviour
             case 2:
                 Debug.Log("完成任務");
                 GameObject ga = GameObject.FindGameObjectWithTag("Player").transform.Find("missiondiary").Find(mission.name).gameObject;
+                Debug.Log(mission.name);
+                Debug.Log(ga);
                 ga.SendMessage("missioncomplete",SendMessageOptions.DontRequireReceiver);
                 Destroy(ga);
                 break;

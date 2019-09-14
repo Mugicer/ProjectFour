@@ -9,7 +9,7 @@ public class checkM01 : MonoBehaviour
     private void Start()
     {
         m01 = transform.GetComponent<M01>();
-        playerBag =transform.parent.parent.GetComponentInChildren<PlayerBag>();
+        playerBag = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerBag>();
         for (int i = 0; i < m01.needs.Length; i++)
         {
             m01.needs[i].count = m01.needcount[i];
@@ -79,7 +79,7 @@ public class checkM01 : MonoBehaviour
                 {
                     if (p[j].ObjName == m01.reward[i].ObjName )
                     {
-                        p[i].count += m01.rewardcount[i];
+                        p[j].count += m01.rewardcount[i];
                     }
                 }
 
